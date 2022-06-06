@@ -1,0 +1,10 @@
+C:\Users\mdsohiduddin\source\repos\PrintingSerivce\bin\Debug\PrintingSerivce.exe.config
+C:\Users\mdsohiduddin\source\repos\PrintingSerivce\bin\Debug\PrintingSerivce.exe
+C:\Users\mdsohiduddin\source\repos\PrintingSerivce\bin\Debug\PrintingSerivce.pdb
+C:\Users\mdsohiduddin\source\repos\PrintingSerivce\obj\Debug\PrintingSerivce.csproj.AssemblyReference.cache
+C:\Users\mdsohiduddin\source\repos\PrintingSerivce\obj\Debug\PrintingSerivce.csproj.SuggestedBindingRedirects.cache
+C:\Users\mdsohiduddin\source\repos\PrintingSerivce\obj\Debug\PrintingSerivce.ProjectInstaller.resources
+C:\Users\mdsohiduddin\source\repos\PrintingSerivce\obj\Debug\PrintingSerivce.csproj.GenerateResource.cache
+C:\Users\mdsohiduddin\source\repos\PrintingSerivce\obj\Debug\PrintingSerivce.csproj.CoreCompileInputs.cache
+C:\Users\mdsohiduddin\source\repos\PrintingSerivce\obj\Debug\PrintingSerivce.exe
+C:\Users\mdsohiduddin\source\repos\PrintingSerivce\obj\Debug\PrintingSerivce.pdb
