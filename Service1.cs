@@ -474,7 +474,7 @@ namespace PrintingSerivce
                 barcodLib.StandardizeLabel = true;
                 barcodLib.IncludeLabel = true;
 
-                Image barCodeimage = barcodLib.Encode(BarcodeLib.TYPE.CODE128, a4Printers[a4PrinterIndex].cn_number, foreColor, backColor, imageWidth, imageHeight);
+                Image barCodeimage = barcodLib.Encode(BarcodeLib.TYPE.CODE128, thermalPrinters[thermalIndex].lot_number, foreColor, backColor, imageWidth, imageHeight);
 
              
 
