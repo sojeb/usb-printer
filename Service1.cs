@@ -384,14 +384,14 @@ namespace PrintingSerivce
                 int topPanellineGape2 = 26;
                 topPanelleft1 = 420;
                 int adjustTop1 = 2;
-                e.Graphics.DrawString(a4Printers[a4PrinterIndex].service_name, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(topPanelleft1, TopPaneltop1 - adjustTop1 ));
-                e.Graphics.DrawString(a4Printers[a4PrinterIndex].is_home_delivery == "1" ? "H/D" : "O/D", new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(topPanelleft1, TopPaneltop1 - adjustTop1 + topPanellineGape2+3));
-                e.Graphics.DrawString(a4Printers[a4PrinterIndex].condition_amount==".00"? "00": a4Printers[a4PrinterIndex].condition_amount, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(topPanelleft1, TopPaneltop1 - adjustTop1 + topPanellineGape2 * 2+3));
+                e.Graphics.DrawString(a4Printers[a4PrinterIndex].service_name, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(topPanelleft1-5, TopPaneltop1 - adjustTop1-1 ));
+                e.Graphics.DrawString(a4Printers[a4PrinterIndex].is_home_delivery == "1" ? "H/D" : "O/D", new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(topPanelleft1-5, TopPaneltop1 - adjustTop1 + topPanellineGape2+2));
+                e.Graphics.DrawString(a4Printers[a4PrinterIndex].condition_amount==".00"? "00": a4Printers[a4PrinterIndex].condition_amount, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(topPanelleft1-5, TopPaneltop1 - adjustTop1 + topPanellineGape2 * 2+2));
 
 
                 // BarCode 
 
-                e.Graphics.DrawImage(barCodeimage, new Rectangle(topPanelleft1 + 140, TopPaneltop1 + 80, 200, 60));
+                e.Graphics.DrawImage(barCodeimage, new Rectangle(topPanelleft1 + 140, TopPaneltop1 + 77, 200, 60));
 
                 int senderleft1 = 153;
                 int sendertop1 = topDisplacement + 205 - topAdjustMent;
@@ -399,15 +399,15 @@ namespace PrintingSerivce
 
                 // sender information 
 
-                e.Graphics.DrawString(a4Printers[a4PrinterIndex].sender_name, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(senderleft1, sendertop1));
-                e.Graphics.DrawString(a4Printers[a4PrinterIndex].sender_contact_no, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(senderleft1, sendertop1 + lineGape));
-                e.Graphics.DrawString(a4Printers[a4PrinterIndex].sender_address, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(senderleft1, sendertop1 + lineGape * 2));
+                e.Graphics.DrawString(a4Printers[a4PrinterIndex].sender_name, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(senderleft1-12, sendertop1-3));
+                e.Graphics.DrawString(a4Printers[a4PrinterIndex].sender_contact_no, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(senderleft1-10, sendertop1 + lineGape));
+                e.Graphics.DrawString(a4Printers[a4PrinterIndex].sender_address, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(senderleft1-12, sendertop1 + lineGape * 2));
 
                 // reciver information 
                 senderleft1 = 395;
-                e.Graphics.DrawString(a4Printers[a4PrinterIndex].receiver_name, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(senderleft1, sendertop1 - 6));
-                e.Graphics.DrawString(a4Printers[a4PrinterIndex].receiver_contact_no, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(senderleft1, sendertop1 + lineGape - 5));
-                e.Graphics.DrawString(a4Printers[a4PrinterIndex].receiver_address, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(senderleft1, sendertop1 + lineGape * 2 - 3));
+                e.Graphics.DrawString(a4Printers[a4PrinterIndex].receiver_name, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(senderleft1-9, sendertop1 - 8));
+                e.Graphics.DrawString(a4Printers[a4PrinterIndex].receiver_contact_no, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(senderleft1-7, sendertop1 + lineGape - 5));
+                e.Graphics.DrawString(a4Printers[a4PrinterIndex].receiver_address, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(senderleft1-9, sendertop1 + lineGape * 2 - 3));
 
                 // Product Description 
                 int productTop1 = topDisplacement + 300 - topAdjustMent;
@@ -420,9 +420,9 @@ namespace PrintingSerivce
                 // Booking Officer Information 
 
                 int moneyTop1 = topDisplacement + 342 - topAdjustMent;
-                e.Graphics.DrawString(MYPRINTER.AmountToText.amountToWord(a4Printers[a4PrinterIndex].net_amount), new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(productLeft + 70, moneyTop1));
-                e.Graphics.DrawString(a4Printers[a4PrinterIndex].user_name, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(productLeft + 80, moneyTop1 + 24));
-                e.Graphics.DrawString(DateTime.Now.ToString("MM/dd/yyyy h:mm tt") +"( "+a4Printers[a4PrinterIndex].user_name+")", new Font(fontName, fontSize-3, fontStyle), Brushes.Black, new Point(productLeft + 260, moneyTop1 + 24));
+                e.Graphics.DrawString(MYPRINTER.AmountToText.amountToWord(a4Printers[a4PrinterIndex].net_amount), new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(productLeft + 70, moneyTop1-2));
+                e.Graphics.DrawString(a4Printers[a4PrinterIndex].user_name, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(productLeft + 80, moneyTop1 + 22));
+                e.Graphics.DrawString(DateTime.Now.ToString("MM/dd/yyyy h:mm tt") +"( "+a4Printers[a4PrinterIndex].user_name+")", new Font(fontName, fontSize-3, fontStyle), Brushes.Black, new Point(productLeft + 245, moneyTop1 + 22));
 
                     e.Graphics.DrawString(formatdDate, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(productLeft + 460, moneyTop1 + 20));
 
