@@ -391,7 +391,7 @@ namespace PrintingSerivce
 
                 // BarCode 
 
-                e.Graphics.DrawImage(barCodeimage, new Rectangle(topPanelleft1 + 140, TopPaneltop1 + 81, 200, 60));
+                e.Graphics.DrawImage(barCodeimage, new Rectangle(topPanelleft1 + 140, TopPaneltop1 + 80, 200, 60));
 
                 int senderleft1 = 153;
                 int sendertop1 = topDisplacement + 205 - topAdjustMent;
@@ -422,7 +422,7 @@ namespace PrintingSerivce
                 int moneyTop1 = topDisplacement + 342 - topAdjustMent;
                 e.Graphics.DrawString(MYPRINTER.AmountToText.amountToWord(a4Printers[a4PrinterIndex].net_amount), new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(productLeft + 70, moneyTop1));
                 e.Graphics.DrawString(a4Printers[a4PrinterIndex].user_name, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(productLeft + 80, moneyTop1 + 24));
-                e.Graphics.DrawString(DateTime.Now.ToString("MM/dd/yyyy h:mm tt") +"( "+a4Printers[a4PrinterIndex].user_name+")", new Font(fontName, fontSize-3, fontStyle), Brushes.Black, new Point(productLeft + 240, moneyTop1 + 24));
+                e.Graphics.DrawString(DateTime.Now.ToString("MM/dd/yyyy h:mm tt") +"( "+a4Printers[a4PrinterIndex].user_name+")", new Font(fontName, fontSize-3, fontStyle), Brushes.Black, new Point(productLeft + 260, moneyTop1 + 24));
 
                     e.Graphics.DrawString(formatdDate, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(productLeft + 460, moneyTop1 + 20));
 
