@@ -379,7 +379,7 @@ namespace PrintingSerivce
                 topPanelleft1 = 420;
                 int adjustTop1 = 2;
                 e.Graphics.DrawString(a4Printers[a4PrinterIndex].service_name, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(topPanelleft1, TopPaneltop1 - adjustTop1 ));
-                e.Graphics.DrawString(a4Printers[a4PrinterIndex].is_home_delivery, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(topPanelleft1, TopPaneltop1 - adjustTop1 + topPanellineGape2+3));
+                e.Graphics.DrawString(a4Printers[a4PrinterIndex].is_home_delivery == "1" ? "H/D" : "O/D", new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(topPanelleft1, TopPaneltop1 - adjustTop1 + topPanellineGape2+3));
                 e.Graphics.DrawString(a4Printers[a4PrinterIndex].condition_amount, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(topPanelleft1, TopPaneltop1 - adjustTop1 + topPanellineGape2 * 2+3));
 
 
@@ -459,20 +459,7 @@ namespace PrintingSerivce
 
                 String convertedDate = dateTime.ToLongDateString();
 
-                /*  SfBarcode barcode = new SfBarcode();
-                  barcode.Text = thermalPrinters[thermalIndex].lot_number;
 
-
-                  barcode.SymbologySettings = code128ASetting;
-                  barcode.Symbology = BarcodeSymbolType.Code128A;
-                  barcode.DisplayText = true;
-                  barcode.Size = new Size(100, 40);
-                  barcode.TextColor = Color.Black;
-  */
-
-                // code93.TextDisplayLocation = TextLocation.Bottom;
-                //  code93.Text = thermalPrinters[thermalIndex].lot_number;
-                //  Image barCodeimage = code93.ToImage();
 
                 BarcodeLib.Barcode barcodLib = new BarcodeLib.Barcode();
                 barcodLib.StandardizeLabel = true;
