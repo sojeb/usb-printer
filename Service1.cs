@@ -352,7 +352,13 @@ namespace PrintingSerivce
                 barcodLib.IncludeLabel = true;
 
                 Image barCodeimage = barcodLib.Encode(BarcodeLib.TYPE.CODE128, a4Printers[a4PrinterIndex].cn_number, foreColor, backColor, imageWidth, imageHeight);
-
+                string formatdDate = a4Printers[a4PrinterIndex].created_at;
+                try
+                {
+                    formatdDate = Convert.ToDateTime(a4Printers[a4PrinterIndex].created_at).ToString();
+                } catch (Exception error) {
+                    WriteToFile(error.Message, "error");
+                }
 
 
                 int topDisplacement = 0;
@@ -380,7 +386,7 @@ namespace PrintingSerivce
                 int adjustTop1 = 2;
                 e.Graphics.DrawString(a4Printers[a4PrinterIndex].service_name, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(topPanelleft1, TopPaneltop1 - adjustTop1 ));
                 e.Graphics.DrawString(a4Printers[a4PrinterIndex].is_home_delivery == "1" ? "H/D" : "O/D", new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(topPanelleft1, TopPaneltop1 - adjustTop1 + topPanellineGape2+3));
-                e.Graphics.DrawString(a4Printers[a4PrinterIndex].condition_amount, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(topPanelleft1, TopPaneltop1 - adjustTop1 + topPanellineGape2 * 2+3));
+                e.Graphics.DrawString(a4Printers[a4PrinterIndex].condition_amount==".00"? "00": a4Printers[a4PrinterIndex].condition_amount, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(topPanelleft1, TopPaneltop1 - adjustTop1 + topPanellineGape2 * 2+3));
 
 
                 // BarCode 
@@ -415,9 +421,12 @@ namespace PrintingSerivce
 
                 int moneyTop1 = topDisplacement + 342 - topAdjustMent;
                 e.Graphics.DrawString(MYPRINTER.AmountToText.amountToWord(a4Printers[a4PrinterIndex].net_amount), new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(productLeft + 70, moneyTop1));
-                e.Graphics.DrawString(a4Printers[a4PrinterIndex].user_name, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(productLeft + 110, moneyTop1 + 24));
-                e.Graphics.DrawString(a4Printers[a4PrinterIndex].created_at, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(productLeft + 460, moneyTop1 + 20));
+                e.Graphics.DrawString(a4Printers[a4PrinterIndex].user_name, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(productLeft + 80, moneyTop1 + 24));
+                e.Graphics.DrawString(DateTime.Now.ToString("MM/dd/yyyy h:mm tt") +"( "+a4Printers[a4PrinterIndex].user_name+")", new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(productLeft + 310, moneyTop1 + 24));
 
+                    e.Graphics.DrawString(formatdDate, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(productLeft + 460, moneyTop1 + 20));
+
+                   
                 topDisplacement += 370 - j * 6;
             }
 
@@ -437,7 +446,7 @@ namespace PrintingSerivce
 
         private void thermalPrintDocument_PrintPage(object sender, PrintPageEventArgs e)
         {
-
+            WriteToFile("thermal document preparation", "print");
             try
             {
                 var dateTime = DateTime.Now;
