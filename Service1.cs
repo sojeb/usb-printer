@@ -374,12 +374,13 @@ namespace PrintingSerivce
                 FontStyle fontStyle = FontStyle.Bold;
 
                 int topPanelleft1 = 200;
-                int TopPaneltop1 = 40 + topDisplacement;
+                int TopPaneltop1 = 36 + topDisplacement;
                 int topPanellineGape = 18;
 
-                // Uppur Information 
+                 
+                    // Uppur Information 
 
-                e.Graphics.DrawString(convertedDate, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(topPanelleft1 - 100, TopPaneltop1));
+                    e.Graphics.DrawString(convertedDate, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(topPanelleft1 - 100, TopPaneltop1));
                 e.Graphics.DrawString(a4Printers[a4PrinterIndex].sender_reference, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(topPanelleft1 - 100, TopPaneltop1 + topPanellineGape));
                 e.Graphics.DrawString(a4Printers[a4PrinterIndex].sender_branch_name, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(topPanelleft1 - 40, TopPaneltop1 + topPanellineGape * 2));
                 e.Graphics.DrawString(a4Printers[a4PrinterIndex].receiver_branch_name, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(topPanelleft1, TopPaneltop1 + topPanellineGape * 3 + 1));
@@ -387,9 +388,9 @@ namespace PrintingSerivce
                 int topPanellineGape2 = 26;
                 topPanelleft1 = 420;
                 int adjustTop1 = 2;
-                e.Graphics.DrawString(a4Printers[a4PrinterIndex].service_name, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(topPanelleft1, TopPaneltop1 - adjustTop1 - 3));
-                e.Graphics.DrawString(a4Printers[a4PrinterIndex].is_home_delivery, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(topPanelleft1, TopPaneltop1 - adjustTop1 + topPanellineGape2));
-                e.Graphics.DrawString(a4Printers[a4PrinterIndex].condition_amount, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(topPanelleft1, TopPaneltop1 - adjustTop1 + topPanellineGape2 * 2));
+                e.Graphics.DrawString(a4Printers[a4PrinterIndex].service_name, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(topPanelleft1, TopPaneltop1 - adjustTop1 ));
+                e.Graphics.DrawString(a4Printers[a4PrinterIndex].is_home_delivery, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(topPanelleft1, TopPaneltop1 - adjustTop1 + topPanellineGape2+3));
+                e.Graphics.DrawString(a4Printers[a4PrinterIndex].condition_amount, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(topPanelleft1, TopPaneltop1 - adjustTop1 + topPanellineGape2 * 2+3));
 
 
                 // BarCode 
