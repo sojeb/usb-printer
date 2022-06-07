@@ -41,7 +41,7 @@ namespace PrintingSerivce
         int a4PrinterIndex = 0;
         int thermalIndex = 0;
 
-        int imageWidth = 250;  // barcode image width
+        int imageWidth = 200;  // barcode image width
         int imageHeight = 60; //barcode image height
         Color foreColor = Color.Black; // Color to print barcode
         Color backColor = Color.White; //background color
@@ -345,18 +345,7 @@ namespace PrintingSerivce
             var dateTime = DateTime.Now;
 
             String convertedDate = dateTime.ToLongDateString();
-                /*   SfBarcode barcode = new SfBarcode();
-                   barcode.Text = a4Printers[a4PrinterIndex].cn_number;
-                   barcode.SymbologySettings = code128ASetting;
-                   barcode.Symbology = BarcodeSymbolType.Code128A;
-                   barcode.DisplayText = true;
-                   barcode.Size = new Size(100, 40);
-                       BarcodeLib.Barcode barcodLib = new BarcodeLib.Barcode();
-                       barcodeImage = barcodLib.Encode(BarcodeLib.TYPE.CODE128, NumericString, foreColor, backColor, imageWidth, imageHeight);
-
-
-                       Image barCodeimage = barcode.ToImage(barcode.Size);
-       */
+              
 
                 BarcodeLib.Barcode barcodLib = new BarcodeLib.Barcode();
                 barcodLib.StandardizeLabel = true;
@@ -396,7 +385,7 @@ namespace PrintingSerivce
 
                 // BarCode 
 
-                e.Graphics.DrawImage(barCodeimage, new Rectangle(topPanelleft1 + 140, TopPaneltop1 + 85, 250, 70));
+                e.Graphics.DrawImage(barCodeimage, new Rectangle(topPanelleft1 + 140, TopPaneltop1 + 85, 200, 60));
 
                 int senderleft1 = 153;
                 int sendertop1 = topDisplacement + 205 - topAdjustMent;
@@ -536,7 +525,7 @@ namespace PrintingSerivce
                 e.Graphics.DrawString(thermalPrinters[thermalIndex].cn_number + " / " + thermalPrinters[thermalIndex].total_lot_qty, new Font(fontName, fontSizeSenderToReceiver, FontStyle.Bold), Brushes.Black, new Point(refsLeft1 + 60, barcodeHight));
 
 
-                e.Graphics.DrawImage(barCodeimage, new Rectangle(refsLeft1 + 50, barcodeHight + 20, 250, 60));
+                e.Graphics.DrawImage(barCodeimage, new Rectangle(refsLeft1 + 50, barcodeHight + 20, 200, 60));
 
 
                 int dayHeight = 180;
