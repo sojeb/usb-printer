@@ -41,6 +41,10 @@ namespace PrintingSerivce
         int a4PrinterIndex = 0;
         int thermalIndex = 0;
 
+        int imageWidth = 250;  // barcode image width
+        int imageHeight = 60; //barcode image height
+        Color foreColor = Color.Black; // Color to print barcode
+        Color backColor = Color.White; //background color
 
 
 
@@ -340,16 +344,28 @@ namespace PrintingSerivce
             var dateTime = DateTime.Now;
 
             String convertedDate = dateTime.ToLongDateString();
-            SfBarcode barcode = new SfBarcode();
-            barcode.Text = a4Printers[a4PrinterIndex].cn_number;
-            barcode.SymbologySettings = code128ASetting;
-            barcode.Symbology = BarcodeSymbolType.Code128A;
-            barcode.DisplayText = true;
-            barcode.Size = new Size(100, 40);
-            Image barCodeimage = barcode.ToImage(barcode.Size);
+                /*   SfBarcode barcode = new SfBarcode();
+                   barcode.Text = a4Printers[a4PrinterIndex].cn_number;
+                   barcode.SymbologySettings = code128ASetting;
+                   barcode.Symbology = BarcodeSymbolType.Code128A;
+                   barcode.DisplayText = true;
+                   barcode.Size = new Size(100, 40);
+                       BarcodeLib.Barcode barcodLib = new BarcodeLib.Barcode();
+                       barcodeImage = barcodLib.Encode(BarcodeLib.TYPE.CODE128, NumericString, foreColor, backColor, imageWidth, imageHeight);
 
 
-            int topDisplacement = 0;
+                       Image barCodeimage = barcode.ToImage(barcode.Size);
+       */
+
+                BarcodeLib.Barcode barcodLib = new BarcodeLib.Barcode();
+                barcodLib.StandardizeLabel = true;
+                barcodLib.IncludeLabel = true;
+
+                Image barCodeimage = barcodLib.Encode(BarcodeLib.TYPE.CODE128, a4Printers[a4PrinterIndex].cn_number, foreColor, backColor, imageWidth, imageHeight);
+
+
+
+                int topDisplacement = 0;
             int topAdjustMent = 60;
             for (int j = 0; j < 3; j++)
             {
@@ -378,7 +394,7 @@ namespace PrintingSerivce
 
                 // BarCode 
 
-                e.Graphics.DrawImage(barCodeimage, new Rectangle(topPanelleft1 + 140, TopPaneltop1 + 85, 200, 70));
+                e.Graphics.DrawImage(barCodeimage, new Rectangle(topPanelleft1 + 140, TopPaneltop1 + 85, 250, 70));
 
                 int senderleft1 = 153;
                 int sendertop1 = topDisplacement + 205 - topAdjustMent;
@@ -452,24 +468,28 @@ namespace PrintingSerivce
 
                 String convertedDate = dateTime.ToLongDateString();
 
-                SfBarcode barcode = new SfBarcode();
-                barcode.Text = thermalPrinters[thermalIndex].lot_number;
+                /*  SfBarcode barcode = new SfBarcode();
+                  barcode.Text = thermalPrinters[thermalIndex].lot_number;
 
 
-                barcode.SymbologySettings = code128ASetting;
-                barcode.Symbology = BarcodeSymbolType.Code128A;
-                barcode.DisplayText = true;
-                barcode.Size = new Size(100, 40);
-                barcode.TextColor = Color.Black;
-
+                  barcode.SymbologySettings = code128ASetting;
+                  barcode.Symbology = BarcodeSymbolType.Code128A;
+                  barcode.DisplayText = true;
+                  barcode.Size = new Size(100, 40);
+                  barcode.TextColor = Color.Black;
+  */
 
                 // code93.TextDisplayLocation = TextLocation.Bottom;
                 //  code93.Text = thermalPrinters[thermalIndex].lot_number;
                 //  Image barCodeimage = code93.ToImage();
 
+                BarcodeLib.Barcode barcodLib = new BarcodeLib.Barcode();
+                barcodLib.StandardizeLabel = true;
+                barcodLib.IncludeLabel = true;
 
-                Image barCodeimage = barcode.ToImage(barcode.Size);
+                Image barCodeimage = barcodLib.Encode(BarcodeLib.TYPE.CODE128, a4Printers[a4PrinterIndex].cn_number, foreColor, backColor, imageWidth, imageHeight);
 
+             
 
                 string fontName = "Roboto";
                 int fontSize = 8;
@@ -514,7 +534,7 @@ namespace PrintingSerivce
                 e.Graphics.DrawString(thermalPrinters[thermalIndex].cn_number + " / " + thermalPrinters[thermalIndex].total_lot_qty, new Font(fontName, fontSizeSenderToReceiver, FontStyle.Bold), Brushes.Black, new Point(refsLeft1 + 60, barcodeHight));
 
 
-                e.Graphics.DrawImage(barCodeimage, new Rectangle(refsLeft1 + 50, barcodeHight + 20, 200, 60));
+                e.Graphics.DrawImage(barCodeimage, new Rectangle(refsLeft1 + 50, barcodeHight + 20, 250, 60));
 
 
                 int dayHeight = 180;

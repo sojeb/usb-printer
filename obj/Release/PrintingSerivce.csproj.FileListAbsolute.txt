@@ -20,3 +20,45 @@ C:\Users\mdsohiduddin\source\repos\PrintingSerivce\bin\Release\Syncfusion.Licens
 C:\Users\mdsohiduddin\source\repos\PrintingSerivce\bin\Release\Syncfusion.SfBarcode.Windows.dll
 C:\Users\mdsohiduddin\source\repos\PrintingSerivce\bin\Release\Syncfusion.SfBarcode.Windows.xml
 C:\Users\mdsohiduddin\source\repos\PrintingSerivce\obj\Release\PrintingSerivce.Service1.resources
+D:\dot net\git\usb-printer\bin\Release\x86\pdfium.dll
+D:\dot net\git\usb-printer\bin\Release\x64\pdfium.dll
+D:\dot net\git\usb-printer\bin\Release\PrintingService.exe.config
+D:\dot net\git\usb-printer\bin\Release\PrintingService.exe
+D:\dot net\git\usb-printer\bin\Release\PrintingService.pdb
+D:\dot net\git\usb-printer\bin\Release\BarcodeStandard.dll
+D:\dot net\git\usb-printer\bin\Release\Microsoft.Bcl.AsyncInterfaces.dll
+D:\dot net\git\usb-printer\bin\Release\Newtonsoft.Json.dll
+D:\dot net\git\usb-printer\bin\Release\PdfiumViewer.dll
+D:\dot net\git\usb-printer\bin\Release\Syncfusion.Licensing.dll
+D:\dot net\git\usb-printer\bin\Release\Syncfusion.SfBarcode.Windows.dll
+D:\dot net\git\usb-printer\bin\Release\System.Buffers.dll
+D:\dot net\git\usb-printer\bin\Release\System.Drawing.Common.dll
+D:\dot net\git\usb-printer\bin\Release\System.Memory.dll
+D:\dot net\git\usb-printer\bin\Release\System.Numerics.Vectors.dll
+D:\dot net\git\usb-printer\bin\Release\System.Runtime.CompilerServices.Unsafe.dll
+D:\dot net\git\usb-printer\bin\Release\System.Text.Encodings.Web.dll
+D:\dot net\git\usb-printer\bin\Release\System.Text.Json.dll
+D:\dot net\git\usb-printer\bin\Release\System.Threading.Tasks.Extensions.dll
+D:\dot net\git\usb-printer\bin\Release\System.ValueTuple.dll
+D:\dot net\git\usb-printer\bin\Release\Microsoft.Bcl.AsyncInterfaces.xml
+D:\dot net\git\usb-printer\bin\Release\Newtonsoft.Json.xml
+D:\dot net\git\usb-printer\bin\Release\PdfiumViewer.xml
+D:\dot net\git\usb-printer\bin\Release\Syncfusion.SfBarcode.Windows.xml
+D:\dot net\git\usb-printer\bin\Release\System.Buffers.xml
+D:\dot net\git\usb-printer\bin\Release\System.Memory.xml
+D:\dot net\git\usb-printer\bin\Release\System.Numerics.Vectors.xml
+D:\dot net\git\usb-printer\bin\Release\System.Runtime.CompilerServices.Unsafe.xml
+D:\dot net\git\usb-printer\bin\Release\System.Text.Encodings.Web.xml
+D:\dot net\git\usb-printer\bin\Release\System.Text.Json.xml
+D:\dot net\git\usb-printer\bin\Release\System.Threading.Tasks.Extensions.xml
+D:\dot net\git\usb-printer\bin\Release\System.ValueTuple.xml
+D:\dot net\git\usb-printer\bin\Release\nl\PdfiumViewer.resources.dll
+D:\dot net\git\usb-printer\obj\Release\PrintingSerivce.csproj.AssemblyReference.cache
+D:\dot net\git\usb-printer\obj\Release\PrintingSerivce.csproj.SuggestedBindingRedirects.cache
+D:\dot net\git\usb-printer\obj\Release\PrintingSerivce.ProjectInstaller.resources
+D:\dot net\git\usb-printer\obj\Release\PrintingSerivce.Service1.resources
+D:\dot net\git\usb-printer\obj\Release\PrintingSerivce.csproj.GenerateResource.cache
+D:\dot net\git\usb-printer\obj\Release\PrintingSerivce.csproj.CoreCompileInputs.cache
+D:\dot net\git\usb-printer\obj\Release\PrintingSerivce.csproj.CopyComplete
+D:\dot net\git\usb-printer\obj\Release\PrintingService.exe
+D:\dot net\git\usb-printer\obj\Release\PrintingService.pdb
