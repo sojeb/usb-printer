@@ -209,6 +209,7 @@ namespace PrintingSerivce
                 a4PrintDocument.PrinterSettings.PrinterName = a4PrinterName;
                 a4PrintDocument.DocumentName = "file.pdf";
                 a4PrintDocument.PrinterSettings.PrintFileName = "file.pdf";
+                a4PrintDocument.PrinterSettings.Duplex = Duplex.Simplex;
                 a4PrintDocument.PrintController = new StandardPrintController();
                 a4PrintDocument.Print();
                         }
