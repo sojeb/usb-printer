@@ -486,7 +486,7 @@ namespace PrintingSerivce
 
 
                 e.Graphics.DrawString("Ref: ", new Font(fontName, 10), Brushes.Black, new Point(refsLeft1, refsTop1));
-                e.Graphics.DrawString(thermalPrinters[thermalIndex].sender_reference, new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(refsLeft1 + 28, refsTop1 + 3));
+                e.Graphics.DrawString(thermalPrinters[thermalIndex].sender_reference, new Font(fontName, fontSize+1, fontStyle), Brushes.Black, new Point(refsLeft1 + 28, refsTop1 + 2));
 
                 e.Graphics.DrawString(thermalPrinters[thermalIndex].department_name, new Font(fontName, 10, fontStyle), Brushes.Black, new Point(refsLeft1 + 65, refsTop1 + 3));
                 e.Graphics.DrawString("(" + thermalPrinters[thermalIndex].service_name + ")", new Font(fontName, fontSize, fontStyle), Brushes.Black, new Point(refsLeft1 + 125, refsTop1 + 3));
